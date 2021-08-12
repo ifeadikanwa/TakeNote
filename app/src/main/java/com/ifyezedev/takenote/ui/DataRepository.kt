@@ -1,4 +1,4 @@
-package com.ifyezedev.takenote
+package com.ifyezedev.takenote.ui
 
 import com.ifyezedev.takenote.database.NoteDao
 import javax.inject.Inject

@@ -1,4 +1,4 @@
-package com.ifyezedev.takenote
+package com.ifyezedev.takenote.di
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
