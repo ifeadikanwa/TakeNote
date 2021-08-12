@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import com.ifyezedev.takenote.R
 import com.ifyezedev.takenote.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -25,7 +26,16 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_home, container, false)
+
+        createNote()
+
         return binding.root
+    }
+
+    private fun createNote() {
+        binding.addNoteButton.setOnClickListener {
+//            view.findNavController().navigate()
+        }
     }
 
 }

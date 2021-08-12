@@ -7,5 +7,5 @@ import javax.inject.Singleton
 //noteDao is a transitive dependency(interface in this case)
 // so we have to tell Hilt how to provide it's instance by using a HiltModule
 @Singleton
-class DataRepository @Inject constructor(noteDao: NoteDao) {
+class DataRepository @Inject constructor(private val noteDao: NoteDao) {
 }
