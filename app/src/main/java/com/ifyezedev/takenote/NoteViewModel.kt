@@ -6,4 +6,5 @@ import javax.inject.Inject
 
 @HiltViewModel
 class NoteViewModel @Inject constructor(dataRepository: DataRepository) : ViewModel() {
+
 }

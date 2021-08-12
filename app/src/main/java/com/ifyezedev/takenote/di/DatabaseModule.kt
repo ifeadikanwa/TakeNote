@@ -18,6 +18,7 @@ object DatabaseModule {
     //here we tell Hilt how to provide the noteDao
     //Also note that noteDatabase is a transitive dependency(abstract class in this case) so
     //we have to tell Hilt how to provide it's instance with another HiltModule
+    @Singleton
     @Provides
     fun provideNoteDao(noteDatabase: NoteDatabase) : NoteDao {
         return noteDatabase.noteDao
@@ -32,6 +33,7 @@ object DatabaseModule {
             appContext,
             NoteDatabase::class.java,
             "note_database"
-        ).build()
+        ).fallbackToDestructiveMigration()
+            .build()
     }
 }
