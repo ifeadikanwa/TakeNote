@@ -34,7 +34,7 @@ class HomeFragment : Fragment() {
 
     private fun createNote() {
         binding.addNoteButton.setOnClickListener {
-//            view.findNavController().navigate()
+            view?.findNavController()?.navigate(HomeFragmentDirections.actionHomeFragmentToNoteFragment())
         }
     }
 

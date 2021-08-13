@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -17,12 +17,16 @@
             android:hint="@string/title"/>
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/noteBodyEditText"
+            android:id="@+id/noteContentEditText"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
-            android:hint="@string/body"/>
-
+            android:hint="@string/content"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp"
+            app:boxStrokeColor="#FFF"
+            app:boxBackgroundColor="#FFF"
+            />
 
     </LinearLayout>
 </layout>
